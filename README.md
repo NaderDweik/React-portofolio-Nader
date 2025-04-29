@@ -1,47 +1,74 @@
+# 🚀 React Portfolio Website
+
+🔗 **Live Website:** https://react-portofolio-52dd6.web.app/
+
+---
+
+## 📸 Screenshots
+
+
+![1745917837874](https://github.com/user-attachments/assets/2fd809ac-f5fe-46a4-8c60-abad878ec607)
+![1745917849291](https://github.com/user-attachments/assets/0310cda9-9077-4e2a-af03-4c21f1365dac)
+
+
+---
+
+## 📌 Description
+
 A modern, responsive portfolio website built with React, showcasing my projects and skills as a Software Engineer.
+
+---
 
 ## 🌟 Features
 
-- **Dark/Light Mode Toggle**: Seamless theme switching for better user experience
-- **Responsive Design**: Fully responsive across all device sizes
-- **Interactive UI**: Smooth animations and transitions
-- **Project Showcase**: Filterable project gallery with categories
-- **Contact Form**: Integrated contact form for easy communication
-- **Dynamic Content**: Easy to update and maintain
+- 🌗 **Dark/Light Mode Toggle** – Seamless theme switching for better user experience  
+- 📱 **Responsive Design** – Fully responsive across all device sizes  
+- 🌀 **Interactive UI** – Smooth animations and transitions  
+- 🧩 **Project Showcase** – Filterable project gallery with categories  
+- 📬 **Contact Form** – Integrated contact form for easy communication  
+- 🔄 **Dynamic Content** – Easy to update and maintain  
+
+---
 
 ## 🛠️ Technologies Used
 
-- React.js
-- CSS3 (Custom styling)
-- Material-UI Components
-- React Lottie for animations
-- Firebase Hosting
+- React.js  
+- CSS3 (Custom Styling)  
+- Material-UI (MUI)  
+- React Lottie (for animations)  
+- Firebase Hosting  
+
+---
 
 ## 📱 Project Sections
 
-1. **Hero Section**
-   - Professional introduction
-   - Lottie animation
-   - Social media links
+### 🧑‍💼 Hero Section
+- Professional introduction  
+- Lottie animation  
+- Social media links  
 
-2. **Projects Section**
-   - Filterable project gallery
-   - Categories: HTML & CSS, JavaScript, React & MUI
-   - Project cards with links to live demos and source code
+### 💼 Projects Section
+- Filterable project gallery  
+- Categories: HTML & CSS, JavaScript, React & MUI  
+- Project cards with live demo and source code links  
 
-3. **Contact Section**
-   - Contact form
-   - Interactive animation
-   - Social media links
+### 📬 Contact Section
+- Contact form with validation  
+- Lottie animation  
+- Social media links  
+
+---
 
 ## 🚀 Featured Projects
 
-- **Website Teaching JavaScript**: Interactive JavaScript learning platform
-- **Doctor Portal V4.0**: Patient image management system
-- **YouTube Clone**: Frontend practice project
-- **React Stopwatch**: Modern UI stopwatch application
-- **To-Do List**: Interactive task management app
-- **Digital Clock**: Modern digital clock with glassmorphism effect
+- **Website Teaching JavaScript** – Interactive learning platform  
+- **Doctor Portal V4.0** – Patient image management system  
+- **YouTube Clone** – Frontend practice project  
+- **React Stopwatch** – Modern UI stopwatch app  
+- **To-Do List** – Task management with animations  
+- **Digital Clock** – Clock with glassmorphism UI  
+
+---
 
 ## 💻 Local Development
 
@@ -49,29 +76,11 @@ A modern, responsive portfolio website built with React, showcasing my projects 
 # Clone the repository
 git clone https://github.com/NaderDweik/React-portfolio-website.git
 
-# Navigate to project directory
+# Navigate into the project directory
 cd React-portfolio-website
 
 # Install dependencies
 npm install
 
-# Start development server
+# Start the development server
 npm run dev
-```
-
-## 🌐 Deployment
-
-The website is deployed on Firebase Hosting and can be accessed at [your-portfolio-url].
-
-## 📄 License
-
-This project is open source and available under the MIT License.
-
-## 📬 Contact
-
-- GitHub: [@NaderDweik](https://github.com/NaderDweik)
-- LinkedIn: [Nader Dweik](https://www.linkedin.com/in/naderdweik/)
-
----
-
-Feel free to fork this project and customize it for your own portfolio! Don't forget to give it a star ⭐ if you found it helpful.
