@@ -50,12 +50,10 @@ section.contact-us #message {
 
 section.contact-us .submit {
   background-color: rgba(36, 37, 46, 1);
-
   padding: 0.75rem 2rem;
   text-align: center;
   font-size: 1.05rem;
   text-transform: capitalize;
-
   border-radius: 5px;
   transition: 0.3s;
   margin-top: 1.8rem;
@@ -64,6 +62,18 @@ section.contact-us .submit {
 
 section.contact-us .submit:hover {
   scale: 0.97;
+}
+
+.animation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: none; /* Removed background shadow */
+
+  margin-left: auto;
+  margin-right: auto;
+  background: none; /* Removed background */
 }
 
 /* =====================================
@@ -98,4 +108,60 @@ section.contact-us .submit:hover {
     width: 30%;
     align-self: center;
   }
+}
+
+.thank-you-container {
+  position: relative;
+  text-align: center;
+}
+
+.animation-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+/* ===============================
+   Light Mode Styles
+================================== */
+body.light-mode section.contact-us .icon-envelope {
+  color: var(--blue);
+}
+
+body.light-mode section.contact-us .title {
+  color: var(--title);
+}
+
+body.light-mode section.contact-us .sub-title {
+  color: var(--subtitle);
+}
+
+body.light-mode section.contact-us #email,
+body.light-mode section.contact-us #message {
+  background-color: rgba(240, 240, 240, 1);
+  border: 1px solid rgba(200, 200, 200, 1);
+  color: var(--title);
+}
+
+body.light-mode section.contact-us #email:focus,
+body.light-mode section.contact-us #message:focus {
+  border: 1px solid var(--blue);
+}
+
+body.light-mode section.contact-us #email:hover,
+body.light-mode section.contact-us #message:hover {
+  border: 1px solid var(--blue);
+}
+
+body.light-mode section.contact-us .submit {
+  background-color: rgba(240, 240, 240, 1);
+  color: var(--title);
+  border: 1px solid rgba(200, 200, 200, 1);
+}
+
+body.light-mode section.contact-us .submit:hover {
+  background-color: rgba(220, 220, 220, 1);
+  color: var(--blue);
 }

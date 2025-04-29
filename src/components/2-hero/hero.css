@@ -2,13 +2,14 @@
  table of contents
 ==============================
 1. Left Section
-2. Right Section ==> animation*/
-
-
-
+2. Right Section ==> animation */
 
 section.hero {
   margin-top: 3rem;
+  display: flex;
+  flex-wrap: nowrap; /* Prevent wrapping */
+  justify-content: space-between; /* Ensure sections stay beside each other */
+  align-items: center; /* Align items vertically in the center */
 }
 
 /* ========================
@@ -67,3 +68,30 @@ section.hero .all-icons .icon:hover {
 /* ===================================
     2. Right Section ==> animation
 ====================================== */
+
+.animation {
+  flex-shrink: 0; /* Prevent shrinking */
+}
+
+.right-section.animation {
+  display: flex; /* Ensure the animation container is flexible */
+  justify-content: center; /* Center the animation horizontally */
+  align-items: center; /* Center the animation vertically */
+  flex-shrink: 0; /* Prevent shrinking */
+  height: 100%; /* Ensure it takes full height of the section */
+  padding: 1rem; /* Add some padding for spacing */
+  margin-left: 40px;
+}
+
+/* ===================================
+    2. Right Section ==> animation
+====================================== */
+
+
+
+
+/* =====================================
+    Responsive Design for Multiple Screen Sizes
+======================================== */
+
+/* Large screens (1000px and above) */

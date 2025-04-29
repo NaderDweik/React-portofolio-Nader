@@ -3,7 +3,8 @@
 ===========================
 1. Left Section ==> Buttons
 2. Right Section ==> Card
-3- Responsive Design (media query)*/
+3- Responsive Design (media query)
+4- Light Mode Styles */
 
 main.flex {
   gap: 2.64rem;
@@ -47,15 +48,14 @@ main section.left-section.flex button.active {
 ================================== */
 
 main section.right-section.flex {
-  /* flex-grow: 1; */
-  justify-content: center;
+  justify-content: space-between; /* Ensure three cards per row */
   flex-wrap: wrap;
-
-  column-gap: 16px;
-  row-gap: 2rem;
+  gap: 1rem; /* Adjust gap between rows */
 }
 
 .card {
+  width: 260px; /* Smaller width for all cards */
+  height: 350px; /* Smaller height for all cards */
   border: 1px solid rgba(93, 188, 252, 0.3);
   border-radius: 5px;
   transition: 0.3s;
@@ -63,6 +63,12 @@ main section.right-section.flex {
     rgba(255, 255, 255, 0.05),
     rgba(255, 255, 255, 0.05)
   );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; /* Ensure content is evenly spaced */
+  overflow: hidden; /* Prevent overflow */
+  padding: 0; /* Remove internal padding */
 }
 
 .card:hover {
@@ -73,57 +79,90 @@ main section.right-section.flex {
 }
 
 .card img {
-  border-radius: 5px;
+  width: 100%; /* Full width of the card */
+  height: 160px; /* Adjusted height for images */
+  object-fit: cover; /* Ensure proper scaling without distortion */
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 .card .box {
-  padding: 1rem 0.4rem;
+  padding: 0.5rem; /* Reduced padding */
+  text-align: center;
+  flex-grow: 1; /* Ensure content fills the remaining space */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Align content properly */
 }
 
 .card .box .title {
   color: var(--title);
+  font-size: 1rem; /* Slightly smaller font size */
+  font-weight: bold;
+  margin-bottom: 0.3rem;
 }
 
 .card .box .sub-title {
   color: var(--subtitle);
-  font-size: 0.8rem;
-  margin-top: 0.7rem;
-  margin-bottom: 1.1rem;
+  font-size: 0.85rem; /* Slightly smaller font size */
+  margin-bottom: 0.5rem;
 }
 
 .card .box .icons {
-  justify-content: space-between;
+  display: flex;
+  justify-content: space-between; /* Space between GitHub and Live links */
+  align-items: center; /* Align links vertically in the center */
+  margin-top: auto; /* Push icons to the bottom */
+  width: 100%; /* Full width of the card */
+  padding: 0 0.5rem; /* Add padding for spacing */
 }
 
 .card .icon-github,
 .card .icon-link {
-  font-size: 1.2rem;
+  font-size: 0.9rem; /* Smaller font size for links */
   color: var(--subtitle);
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s ease;
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Align icon and text vertically */
+  gap: 0.5rem; /* Add space between the icon and the text */
+
+}
+
+.icon-link , .icon-github {
+  gap: 0.5rem; /* Add space between the icon and the text */
+
 }
 
 .card .icon-github:hover,
 .card .icon-link:hover {
-  font-size: 1.25rem;
-  color: var(--icon-hover);
+  color: var(--blue);
   cursor: pointer;
 }
 
-.card a.link {
-  font-size: 0.9rem;
-  color: var(--blue);
-  margin-right: 12px;
-}
-
-
-
 /* =====================================
-  3- Responsive Design (media query)
+   3- Responsive Design (media query)
 ======================================== */
+
+@media (max-width: 900px) {
+  main section.right-section.flex {
+    justify-content: center; /* Center cards on smaller screens */
+  }
+
+  .card {
+    width: 240px; /* Adjust card width for smaller screens */
+    height: 320px; /* Adjust card height for smaller screens */
+  }
+
+  .card img {
+    height: 140px; /* Adjust image height for smaller screens */
+  }
+}
 
 @media (max-width: 600px) {
   main.flex {
     flex-direction: column;
-    gap: 2.64rem;
+    gap: 2rem;
     align-items: center;
   }
 
@@ -139,4 +178,71 @@ main section.right-section.flex {
     padding: 0.8rem 0;
     font-size: 0.9rem;
   }
+
+  main section.right-section.flex {
+    gap: 1rem; /* Adjust gap for smaller screens */
+  }
+
+  .card {
+    width: 100%; /* Full width for smaller screens */
+    height: auto; /* Adjust height dynamically */
+  }
+
+  .card img {
+    height: 140px; /* Adjust image height for smaller screens */
+  }
+}
+
+/* ===============================
+   4. Light Mode Styles
+================================== */
+body.light-mode main section.left-section.flex button {
+  background-color: rgba(240, 240, 240, 1);
+  color: var(--title);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode main section.left-section.flex button:hover {
+  background-color: rgba(220, 220, 220, 1);
+  color: var(--blue);
+}
+
+body.light-mode main section.left-section.flex button.active {
+  background-color: rgba(200, 200, 200, 1);
+  color: var(--blue);
+  border: 1px solid var(--blue);
+}
+
+body.light-mode .card {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.9),
+    rgba(255, 255, 255, 0.9)
+  );
+}
+
+body.light-mode .card:hover {
+  border: 1px solid var(--blue);
+  background-image: linear-gradient(
+    rgba(240, 240, 240, 1),
+    rgba(240, 240, 240, 1)
+  );
+}
+
+body.light-mode .card .box .title {
+  color: var(--title);
+}
+
+body.light-mode .card .box .sub-title {
+  color: var(--subtitle);
+}
+
+body.light-mode .card .icon-github,
+body.light-mode .card .icon-link {
+  color: var(--subtitle);
+}
+
+body.light-mode .card .icon-github:hover,
+body.light-mode .card .icon-link:hover {
+  color: var(--blue);
 }

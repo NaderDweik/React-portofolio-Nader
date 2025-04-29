@@ -1,32 +1,46 @@
 import "./hero.css";
+import Lottie from "react-lottie";
+import animationData from "../../../public/Animation/Coder.json"; // Adjust the path if necessary
+
 const Hero = () => {
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: animationData,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
+
   return (
     <section className="hero flex">
-      <div className="left-section  ">
+      <div className="left-section">
         <div className="parent-avatar flex">
-          <img src="./me.jpg" className="avatar" alt="" />
+          <img src="../../public/me.jpeg" className="avatar" alt="" />
           <div className="icon-verified"></div>
         </div>
 
         <h1 className="title">
-          Software designer, founder, and amateur astronaut.
+          Software Engineer who likes creativity.
         </h1>
         <p className="sub-title">
-          I’m Ali Hassan, a software designer and entrepreneur based in New York
-          City. I’m the founder and CEO of Planetaria, where we develop
-          technologies that empower regular people to explore space on their own
+          I’m Nader Dweik, a software Engineer based in Amman
+          Jordan.  I develop and find
+          technologies that empower Companies to explore space on their own
           terms.
-        </p>
-
+        </p><div>
+</div>
         <div className="all-icons flex">
-          <div className="icon icon-twitter"></div>
-          <div className="icon icon-instagram"></div>
           <div className="icon icon-github"></div>
           <div className="icon icon-linkedin"></div>
         </div>
       </div>
 
-      <div className="right-section animation border">animation</div>
+      <div className="right-section animation">
+        < 
+// @ts-ignore
+        Lottie options={defaultOptions} height={200} width={200} />
+      </div>
     </section>
   );
 };

@@ -1,13 +1,30 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./header.css";
 
 const Header = () => {
-  const [showModal, setshowModal] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const [isLightMode, setIsLightMode] = useState(() => {
+    // Get the initial theme from localStorage or default to false (dark mode)
+    return localStorage.getItem("theme") === "light";
+  });
+
+  useEffect(() => {
+    // Apply the theme class to the body element
+    document.body.classList.toggle("light-mode", isLightMode);
+    // Save the current theme to localStorage
+    localStorage.setItem("theme", isLightMode ? "light" : "dark");
+  }, [isLightMode]);
+
+  const toggleTheme = () => {
+    setIsLightMode((prevMode) => !prevMode);
+  };
+
   return (
-    <header className="  flex">
-      <button onClick={() => {
-        setshowModal(true)
-      }} className="menu icon-menu flex">    </button>
+    <header className="flex">
+      <button
+        onClick={() => setShowModal(true)}
+        className="menu icon-menu flex"
+      ></button>
       <div />
 
       <nav>
@@ -15,7 +32,6 @@ const Header = () => {
           <li>
             <a href="">About</a>
           </li>
-
           <li>
             <a href="">Articles</a>
           </li>
@@ -31,21 +47,18 @@ const Header = () => {
         </ul>
       </nav>
 
-      <button className="mode flex">
-        <span className="icon-moon-o">  </span>
+      <button className="mode flex" onClick={toggleTheme}>
+        <span className={isLightMode ? "icon-sun" : "icon-moon-o"}></span>
       </button>
 
       {showModal && (
         <div className="fixed">
-          <ul className="modal ">
-            <li >
-              <button className="icon-close" onClick={() => {
-                setshowModal(false)
-              }} />   
-              
-             
-              
-           
+          <ul className="modal">
+            <li>
+              <button
+                className="icon-close"
+                onClick={() => setShowModal(false)}
+              />
             </li>
             <li>
               <a href="">About</a>

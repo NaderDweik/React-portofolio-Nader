@@ -143,9 +143,68 @@ header .fixed ul.modal li a {
   font-size: 1rem;
 }
 
-/* =====================================
-  4- Responsive Design (media query)
-======================================== */
+/* ========================
+    Light Mode Styles
+=========================== */
+body.light-mode {
+  --bgHeader: #f9f9f9;
+  --title: #000;
+  --subtitle: #555;
+  --blue: #007bff;
+  --icon-hover: #0056b3;
+  --secondary: #ffffff;
+  --border: #ddd;
+
+  background-color: #ffffff;
+  color: #000000;
+}
+
+body.light-mode header.flex nav {
+  background-color: var(--bgHeader);
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode header ul li a {
+  color: var(--title);
+}
+
+body.light-mode header ul li a:hover {
+  color: var(--blue);
+}
+
+body.light-mode header .icon-menu,
+body.light-mode header button.mode {
+  background-color: var(--bgHeader);
+  color: var(--subtitle);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode header .icon-menu:hover,
+body.light-mode header button.mode:hover {
+  color: var(--title);
+  border: 1px solid var(--blue);
+}
+
+body.light-mode header .fixed {
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+body.light-mode header .fixed ul.modal {
+  background-color: var(--secondary);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode header .fixed ul.modal li {
+  border-bottom: 1px solid var(--border);
+}
+
+body.light-mode header .fixed ul.modal li a {
+  color: var(--title);
+}
+
+/* ========================
+    4- Responsive Design
+=========================== */
 @media (max-width: 700px) {
   header.flex nav {
     display: none;
